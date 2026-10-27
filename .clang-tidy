@@ -1,0 +1,32 @@
+# clang-tidy configuration for Resona.
+# Same rule set as MayaMMD; relax individual checks here with a short reason.
+Checks: >-
+  -*,
+  bugprone-*,
+  clang-analyzer-*,
+  clang-diagnostic-*,
+  cppcoreguidelines-*,
+  misc-*,
+  performance-*,
+  portability-*,
+  readability-*,
+  -misc-include-cleaner,
+  -misc-non-private-member-variables-in-classes,
+  -portability-avoid-pragma-once,
+  -readability-identifier-length,
+  -bugprone-easily-swappable-parameters,
+  -cppcoreguidelines-owning-memory,
+  -cppcoreguidelines-pro-bounds-avoid-unchecked-container-access,
+  -bugprone-throwing-static-initialization,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-avoid-non-const-global-variables,
+  -readability-braces-around-statements,
+  -readability-function-cognitive-complexity,
+  -readability-magic-numbers
+HeaderFilterRegex: 'resona/core/.*'
+WarningsAsErrors: ''
+# (void) casts are used deliberately to discard return values.
+CheckOptions:
+  - key: bugprone-unused-return-value.AllowCastToVoid
+    value: 'true'
+...

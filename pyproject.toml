@@ -1,0 +1,37 @@
+[project]
+authors = [{name = "Sebastian Starosz", email = "staroszsebastian@gmail.com"}]
+description = "Non-destructive, pattern-based cloth creation for Autodesk Maya"
+keywords = ["maya", "cloth", "simulation", "garment", "3d", "tools"]
+license = {text = "MIT"}
+name = "resona"
+readme = "README.md"
+requires-python = ">=3.10.11"
+version = "0.1.0" # Release version is managed by git tags + CMake GitVersion.cmake
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0.0",
+  "ruff>=0.15.0",
+  "mypy>=1.0.0",
+  "PySide6>=6.5.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["resona*"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.mypy]
+files = "resona tests"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+norecursedirs = [
+  "scripts",
+  "tests/integration/maya",
+  ".vscode",
+]
+testpaths = [
+  "tests/unit_tests",
+]
