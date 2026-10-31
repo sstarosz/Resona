@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: MIT
  *
- * core_info.hpp
+ * CoreInfo.hpp
  *
  * Placeholder translation unit for the Maya-free Resona core library.
  * Real modules (pattern, mesher, seams, solver) will live next to it.

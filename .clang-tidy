@@ -20,7 +20,6 @@ Checks: >-
   -bugprone-throwing-static-initialization,
   -cppcoreguidelines-avoid-magic-numbers,
   -cppcoreguidelines-avoid-non-const-global-variables,
-  -readability-braces-around-statements,
   -readability-function-cognitive-complexity,
   -readability-magic-numbers
 HeaderFilterRegex: 'resona/core/.*'

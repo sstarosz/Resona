@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-#include "core_info.hpp"
+#include "CoreInfo.hpp"
 
 namespace resona::core
 {

@@ -33,3 +33,7 @@ AlignTrailingComments: true
 # Allow short functions/lambdas on a single line
 AllowShortFunctionsOnASingleLine: Inline
 AllowShortLambdasOnASingleLine: All
+
+# Braces around every if / else / for / while body, even one-liners
+# (clang-format >= 15).
+InsertBraces: true

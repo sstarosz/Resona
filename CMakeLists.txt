@@ -122,10 +122,15 @@ if(BUILD_NATIVE_MODULE)
     # =====================================================================
     add_library(Resona SHARED
         resona/Resona.cpp
+        resona/maya/nodes/GarmentShape.cpp
+        resona/maya/nodes/PanelShape.cpp
+        resona/maya/nodes/SolverShape.cpp
+        resona/maya/viewport/PanelGeometryOverride.cpp
     )
     target_include_directories(Resona PRIVATE
         "${CMAKE_BINARY_DIR}/generated"
         "${CMAKE_CURRENT_SOURCE_DIR}/resona"
+        "${CMAKE_CURRENT_SOURCE_DIR}/resona/maya"
     )
     target_link_libraries(Resona PRIVATE Maya::Maya resona_core)
 

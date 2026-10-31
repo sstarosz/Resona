@@ -6,7 +6,7 @@
 # =========================================================================
 
 add_library(resona_core STATIC
-    core_info.cpp
+    CoreInfo.cpp
 )
 
 # Linked into the shared Maya plugin, so objects must be PIC on ELF targets.
